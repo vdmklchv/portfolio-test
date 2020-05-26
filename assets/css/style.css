@@ -10,18 +10,14 @@
 
 
 /* main content */
-
-#welcome-section    {
+#main-page  {
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
     height: 100vh;
-    scroll-behavior: smooth;
 }
 
-#welcome-section::after   {
+#main-page::after   {
     content: '';
     background-image: url(../images/first-background.jpg);
     background-position: center;
@@ -82,7 +78,14 @@
     justify-content: space-between;
 }
 
-
+#welcome-section    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    color: white;
+}
 
 #welcome-section h2 {
     font-size: 70px;
@@ -122,7 +125,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
+    height: 90%;
     position: relative;
     top: 10%;
     flex-wrap: wrap;
