@@ -5,12 +5,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Oxygen, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 
 /* main content */
 #main-page  {
-
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -98,7 +99,7 @@
 }
 
 #welcome-content    {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     padding: 0 20px;
     text-align: center;
