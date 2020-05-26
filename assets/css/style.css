@@ -139,6 +139,7 @@
 .project-tile   {
     padding: 0 50px;
     min-width: 350px;
+    max-width: 350px;
     min-height: 350px;
     border: 3px solid dimgray;
     border-radius: 5px;
@@ -147,6 +148,7 @@
     align-items: center;
     text-align: center;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    position: relative;
 }
 
 #projects a {
@@ -156,10 +158,28 @@
     font-weight: 600;
 }
 
-#guess:hover    {
-    animation-name: tile-move;
-    animation-duration: 2s;
-    animation-timing-function: ease;
+.overlay    {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    z-index: 0;
+    transition: 0.3s ease;
+}
+
+.project-tile:hover  .overlay {
+    height: 100%;
+    bottom: 0;
+}
+
+.project-tile:hover p   {
+    z-index: 2;
+    background-color: black;
+    transition: 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #footer {
@@ -188,12 +208,3 @@
     }
 }
 
-@keyframes tile-move    {
-    0% {
-        height: 100%;
-    }
-
-    100% {
-        height: 0;
-    }
-}
